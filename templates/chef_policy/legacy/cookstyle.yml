@@ -1,0 +1,2 @@
+inherit_from:
+  - COMMON/cookstyle/disable_rubocop_cops.yml

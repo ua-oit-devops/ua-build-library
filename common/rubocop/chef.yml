@@ -1,0 +1,23 @@
+# Modern versions of Chef ship with Ruby 3.
+AllCops:
+  TargetRubyVersion: 3.0
+
+# These magic comments have no effect in Ruby 3 and even without the
+# comments, code that treats strings as immutable will still run without
+# modification on older versions of Ruby.
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# The name of Policyfile.rb is not configurable.
+Naming/FileName:
+  Exclude:
+    - 'Policyfile.rb'
+
+Metrics/BlockLength:
+  inherit_mode:
+    merge:
+      - IgnoredMethods
+  IgnoredMethods:
+      # Using tap blocks in attribute files makes the code smaller and
+      # easier to read.  These blocks can span entire files.
+    - tap

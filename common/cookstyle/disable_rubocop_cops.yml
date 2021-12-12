@@ -1,0 +1,31 @@
+# By using this separate config for cookstyle and disabling all of the
+# original robocop cops, here, we are able to use rubocop to perform our
+# static code analysis while we use cookstyle for just its Chef specific
+# cops.
+#
+# Besides adding Chef specific cops to rubocop, cookstyle also modifies
+# rubocop's original cops to prevent them from complaining about syntax and
+# features common in Chef recipes and resources.  These modifications are
+# not approriate when checking actual ruby code such as that in our
+# libraries and test suites and in some cases directly contradict the
+# findings of rubocop's original cops, making it difficult to use both
+# tools in parallel.
+
+Bundler:
+  Enabled: false
+Gemspec:
+  Enabled: false
+Layout:
+  Enabled: false
+Lint:
+  Enabled: false
+Metrics:
+  Enabled: false
+Migration:
+  Enabled: false
+Naming:
+  Enabled: false
+Security:
+  Enabled: false
+Style:
+  Enabled: false

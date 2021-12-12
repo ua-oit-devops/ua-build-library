@@ -1,0 +1,8 @@
+# Chef deprecated ChefSpec's test coverage reports because they felt it
+# encouraged customers to write bad tests.  We continue to use these
+# reports because when used properly, test coverage reports provide useful
+# metrics regarding code health and the level of risk involved when
+# refactoring.
+
+Chef/Deprecations/ChefSpecCoverageReport:
+  Enabled: false

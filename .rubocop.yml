@@ -1,0 +1,3 @@
+inherit_from:
+    # Ignore namespace size in rake templates.
+  - common/rubocop/rake.yml

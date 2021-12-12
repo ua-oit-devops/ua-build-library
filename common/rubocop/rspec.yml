@@ -1,0 +1,13 @@
+Metrics/BlockLength:
+  inherit_mode:
+    merge:
+      - IgnoredMethods
+  IgnoredMethods:
+      # Rubocop added IgnoredMethods specifically for Spec and Rakefiles
+      # in rubocop#3772, removing those files from the ignore list, but
+      # leaving it up to the customer to add the methods to their own
+      # config.
+    - example_group
+    - describe
+    - context
+    - shared_context

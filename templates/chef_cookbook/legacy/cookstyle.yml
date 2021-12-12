@@ -1,0 +1,3 @@
+inherit_from:
+  - COMMON/cookstyle/disable_rubocop_cops.yml
+  - COMMON/cookstyle/allow_coverage_report.yml

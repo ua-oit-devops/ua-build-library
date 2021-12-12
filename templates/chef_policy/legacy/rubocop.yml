@@ -1,0 +1,3 @@
+inherit_from:
+  - COMMON/rubocop/chef.yml
+  - COMMON/rubocop/rake.yml
